@@ -6,6 +6,8 @@
 :root {
   --background: #060507;
   --font-color: #ffffff;
+  --dark-font-color: #3f3e44;
+  --slider-color: #A75B12;
 }
 /* Body */
 body {
@@ -19,6 +21,11 @@ body {
   margin-top: 20px;
 }
 
+/* Logo */
+.logo {
+  margin: 0 20px;
+}
+
 /* Navigation  */
 .navigation {
   display: flex;
@@ -28,15 +35,182 @@ body {
 
 .navigation-item {
   text-decoration: none;
-  margin-left: 60px;
+  margin-left: 50px;
   opacity: 0.7;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .navigation-item:hover {
   opacity: 1;
 }
 
-.logo {
+/* Golden Design */
+.golden-design {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 375px;
+}
+
+/* Speed Section */
+.speed-section {
+  /* Positioning */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+
+  width: 353px;
+  z-index: 3;
+}
+
+.speed-section-item {
+  display: flex;
+  margin-top: 15px; 
+}
+
+.speed-section-details {
+  width: 350px;
+  height: 110px;
+}
+
+.speed-section-name {
+  color: var(--dark-font-color);
+  font-size: 14px;
+  transform: rotate(270deg);
+  height: 1px;
+  width: 240px;
+  text-align: center;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+
+.speed-section-feature,
+.speed-section-info {
+  font-size: 12px;
+}
+
+.speed-section-main {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.speed-section-name,
+.speed-section-feature,
+.speed-section-info {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+}
+
+/* Tyre logo */
+.tyre-logo {
+  position: fixed;
+  top: 14.5vh;
+  right: 250px;
+  height: 62.27vh;
+}
+
+/* Suspension logo */
+.suspension-logo {
+  position: fixed;
+  bottom: 0;
+  right: 250px;
+  height: 22.7vh;
+}
+
+/* Bike section */
+.bike-section {
+  position: relative;
+  margin-top: 7vh;
+  width: max-content;
+}
+
+.bike-trademark {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  height: 15.7vh;
+}
+
+.bike-image {
+  width: 60vw;
+  height: 62.2vh;
+  z-index: 1;
+}
+
+.highlighted-text {
+  position: fixed;
+  display: flex;
+  bottom: 20.8vh;
+  width: 100vw;
+  z-index: 2;
+  animation: bannermove 10s linear infinite;
+  white-space: nowrap;
+}
+
+/* Bottom slider section */
+.bottom-section {
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+}
+
+.slider-line {
+  margin: 0 10px;
+  width: 200px;
+  height: 1px;
+  background-color: var(--font-color);
+}
+
+.slider-line-inner {
+  
+}
+
+.number-left,
+.number-right {
   margin: 0 20px;
+}
+
+
+.arrow {
+  border: solid var(--font-color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  height: 3px;
+  width: 3px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  height: 6px;
+  width: 6px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+
+/* Animmation */
+@keyframes bannermove {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-100%, 0);
+  }
 }
