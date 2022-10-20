@@ -5,7 +5,7 @@
     <Title>MONTBLAC</Title>
   </head>
   <body>
-
+    <script src="./js/index.js" ></script>
     <!-- Make a header -->
     <nav class="header">
       <img class="logo" src="./assets/logo.svg" height="45" width="285">
@@ -104,13 +104,13 @@
     <div class="bottom-section">
       <!-- Slider -->
       <div class="slider">
-        <i class="arrow left"></i>
+        <i class="arrow left" onclick="updateProgress(false)"></i>
         <p class="number-left">2</p>
         <div class="slider-line">
-          <div class="slider-line-inner"></div>
+          <div id="slider-progress" class="slider-line-inner"></div>
         </div>
         <p class="number-right">10</p>
-        <i class="arrow right"></i>
+        <i class="arrow right" onclick="updateProgress(true)"></i>
       </div>
       <!-- description -->
       <div class="bike-details">
@@ -119,6 +119,5 @@
     </div>
     <!-- Suspension logo -->
     <img src="./assets/suspension-logo.svg" class="suspension-logo">
-
   </body>
 </html>

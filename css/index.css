@@ -178,7 +178,7 @@ body {
 }
 
 .slider-line-inner {
-  width: 150px;
+  width: 40px;
   height: 2px;
   background-color: var(--slider-color);
 }
